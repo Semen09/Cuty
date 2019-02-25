@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Adds coin reward etc
+/// </summary>
 public class Coin : MonoBehaviour {
 
 	public int coinValue = 1;

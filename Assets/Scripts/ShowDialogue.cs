@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Old script supported dialogue system
+/// </summary>
 public class ShowDialogue : MonoBehaviour {
     public bool inDialogue = false;
     int numberOfPhrases;

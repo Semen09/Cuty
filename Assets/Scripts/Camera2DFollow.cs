@@ -4,6 +4,9 @@ using UnityEngine;
 // this comes from the Unity Standard Assets
 namespace UnityStandardAssets._2D
 {
+    /// <summary>
+    /// Class for camera to follow player and focus on some things
+    /// </summary>
     public class Camera2DFollow : MonoBehaviour
     {
         public Transform target;

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Focusec camera on explosions etc
+/// </summary>
 public class FocusCamera : MonoBehaviour {
     [SerializeField]
     Camera cam;
@@ -24,6 +27,10 @@ public class FocusCamera : MonoBehaviour {
         
 	}
 
+    /// <summary>
+    /// Focus if triggers
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == targetTag)

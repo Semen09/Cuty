@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Moves platform
+/// </summary>
 public class PlatformMover : MonoBehaviour {
 
 	public GameObject platform; // reference to the platform to move

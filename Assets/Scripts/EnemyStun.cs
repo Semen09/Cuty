@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Stun enemy
+/// </summary>
 public class EnemyStun : MonoBehaviour {
 
 	// if Player hits the stun point of the enemy, then call Stunned on the enemy

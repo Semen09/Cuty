@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Victory script
+/// </summary>
 public class Victory : MonoBehaviour {
 
 	public bool taken = false;

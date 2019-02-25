@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Manages enemy behaviour
+/// </summary>
 public class Enemy : MonoBehaviour {
 	
 	public float moveSpeed = 4f;  // enemy move speed when moving
@@ -45,6 +48,9 @@ public class Enemy : MonoBehaviour {
 	// store the layer number the enemy should be moved to when stunned
 	int _stunnedLayer;
 	
+    /// <summary>
+    /// Constructor
+    /// </summary>
 	void Awake() {
 		// get a reference to the components we are going to be changing and store a reference for efficiency purposes
 		_transform = GetComponent<Transform> ();

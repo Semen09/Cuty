@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Old script for dialogue system
+/// </summary>
 public class DialOpen : MonoBehaviour {
 
     public bool inDialogue = false;

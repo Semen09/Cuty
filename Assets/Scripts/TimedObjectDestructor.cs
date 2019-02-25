@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Destructs object by timeout
+/// </summary>
 public class TimedObjectDestructor : MonoBehaviour {
 
 	public float timeOut = 1.0f;

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+/// <summary>
+/// Custom editor for moving platform
+/// </summary>
 [CustomEditor(typeof(PlatformMover))]
 public class NewBehaviourScript : Editor {
 
@@ -13,8 +16,12 @@ public class NewBehaviourScript : Editor {
         m_MovingPlatform = target as PlatformMover;
     }
 
+    /// <summary>
+    /// Changes inspector GUI
+    /// </summary>
     public override void OnInspectorGUI()
     {
+        // Platform prefab
         EditorGUI.BeginChangeCheck();
         m_MovingPlatform.platform = EditorGUILayout.ObjectField("Platform", m_MovingPlatform.platform, typeof(GameObject), true) as GameObject;
         if (EditorGUI.EndChangeCheck())
@@ -22,6 +29,7 @@ public class NewBehaviourScript : Editor {
             Undo.RecordObject(target, "Changed Platform");
         }
 
+        // Set move speed
         EditorGUI.BeginChangeCheck();
         float newMoveSpeed = EditorGUILayout.Slider("Move Speed", m_MovingPlatform.moveSpeed, 0.0f, 15.0f);
         if (EditorGUI.EndChangeCheck())
@@ -30,6 +38,7 @@ public class NewBehaviourScript : Editor {
             m_MovingPlatform.moveSpeed = newMoveSpeed;
         }
 
+        // Isloop property
         EditorGUI.BeginChangeCheck();
         bool newLoop = EditorGUILayout.Toggle("Is looping", m_MovingPlatform.loop);
         if (EditorGUI.EndChangeCheck())
@@ -88,6 +97,9 @@ public class NewBehaviourScript : Editor {
         }
     }
 
+    /// <summary>
+    /// On scene GUI
+    /// </summary>
     public void OnSceneGUI()
     {
         for(int i = 0; i < m_MovingPlatform.myWaypoints.Length; i++)

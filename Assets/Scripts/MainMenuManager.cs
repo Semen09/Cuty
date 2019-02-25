@@ -4,6 +4,9 @@ using UnityEngine.UI; // include UI namespace since references UI Buttons direct
 using UnityEngine.EventSystems; // include EventSystems namespace so can set initial input for controller support
 using UnityEngine.SceneManagement; // include so we can load new scenes
 
+/// <summary>
+/// Manages main menu buttons and gui
+/// </summary>
 public class MainMenuManager : MonoBehaviour {
 
 	public int startLives=3; // how many lives to start the game with on New Game

@@ -2,8 +2,10 @@
 using System.Collections;
 using UnityEngine.SceneManagement; // include so we can manipulate SceneManager
 
+/// <summary>
+/// Keep game properties
+/// </summary>
 public static class PlayerPrefManager {
-
 	public static int GetLives() {
 		if (PlayerPrefs.HasKey("Lives")) {
 			return PlayerPrefs.GetInt("Lives");

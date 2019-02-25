@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enabling and manages shield
+/// </summary>
 public class Shield : MonoBehaviour {
     bool shieldEnable = false;
     Transform shield;
@@ -57,6 +60,10 @@ public class Shield : MonoBehaviour {
             restBar.gameObject.SetActive(true);
         }
     }
+
+    /// <summary>
+    /// Turnes off shield
+    /// </summary>
     void TurnOffShield()
     {
         shield.gameObject.SetActive(false);

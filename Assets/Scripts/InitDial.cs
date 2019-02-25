@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
+/// <summary>
+/// Initialize dialogue
+/// </summary>
 public class InitDial : MonoBehaviour {
     [SerializeField]
     TextAsset dialogue;
@@ -24,11 +27,6 @@ public class InitDial : MonoBehaviour {
     string levelToLoad;
     int numOfCurPhrase;
     string[] phrases;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -48,6 +46,10 @@ public class InitDial : MonoBehaviour {
             }
         }
 	}
+    /// <summary>
+    /// Invoke dialogue on collision
+    /// </summary>
+    /// <param name="target"></param>
     private void OnCollisionEnter2D(Collision2D target)
     {
         if(target.gameObject.tag == ("Player"))
@@ -55,6 +57,9 @@ public class InitDial : MonoBehaviour {
             ShowDialog();
         }
     }
+    /// <summary>
+    /// Shows dialogue HUD
+    /// </summary>
     void ShowDialog()
     {
         numOfCurPhrase = 0;
@@ -67,6 +72,9 @@ public class InitDial : MonoBehaviour {
         dialogueTextField.text = currentPhrase[1];
     }
 
+    /// <summary>
+    /// End dialogue
+    /// </summary>
     void CloseDialog()
     {
         inDial = false;
@@ -88,11 +96,19 @@ public class InitDial : MonoBehaviour {
                 this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         }
     }
+
+    /// <summary>
+    /// Get data from file
+    /// </summary>
     void ReadFile()
     {
         phrases = dialogue.text.Split('\n');
     }
 
+    /// <summary>
+    /// Returns true if in dialogue
+    /// </summary>
+    /// <returns></returns>
     public bool getStateDial()
     {
         return inDial;

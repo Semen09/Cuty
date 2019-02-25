@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Set freeze time effect
+/// </summary>
 public class FreezeTime : MonoBehaviour {
     bool timeFreezeEnable = false;
     [RangeAttribute(0, 1)]
@@ -9,11 +12,6 @@ public class FreezeTime : MonoBehaviour {
     float coeff = 0.5f;
     [SerializeField]
     UnityEngine.UI.Slider restBar;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -52,6 +50,10 @@ public class FreezeTime : MonoBehaviour {
             restBar.gameObject.SetActive(true);
         }
     }
+
+    /// <summary>
+    /// Turns off effect
+    /// </summary>
     void TurnOffFreezing()
     {
         Time.timeScale = 1f;

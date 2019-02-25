@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Manages new enemies
+/// </summary>
 public class NewEnemy : MonoBehaviour
 {
 
@@ -123,6 +126,9 @@ public class NewEnemy : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Enemy shoots
+    /// </summary>
     void Shoot()
     {
         if (bullet)

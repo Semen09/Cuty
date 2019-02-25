@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine.SceneManagement; // include so we can load new scenes
 
+/// <summary>
+/// Pause menu
+/// </summary>
 public class MenuPauseAndLoadLevel : MonoBehaviour {
 
 	public string levelToLoad;

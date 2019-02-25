@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages bullet behaviour
+/// </summary>
 public class Bullet : MonoBehaviour {
     public float selfDestructTime = 2;
     private float endTime;
@@ -28,6 +31,10 @@ public class Bullet : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Handles collisions with enemies(player or others)
+    /// </summary>
+    /// <param name="target"></param>
     private void OnTriggerEnter2D(Collider2D target)
     {
         if(target.gameObject.tag == enemyTag)

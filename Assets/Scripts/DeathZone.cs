@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Death out of the scene
+/// </summary>
 public class DeathZone : MonoBehaviour {
 
 	public bool destroyNonPlayerObjects = true;

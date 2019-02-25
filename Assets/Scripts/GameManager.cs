@@ -183,23 +183,48 @@ public class GameManager : MonoBehaviour {
 		yield return new WaitForSeconds(3.5f);
 		SceneManager.LoadScene(levelAfterVictory);
 	}
+
+    /// <summary>
+    /// Loads given name scene
+    /// </summary>
+    /// <param name="sceneName"></param>
     public void LoadScene(string sceneName)
     {
         PlayerPrefManager.SavePlayerState(score, highscore, lives);
         SceneManager.LoadScene(sceneName);
     }
+
+    /// <summary>
+    /// Changes shield left points
+    /// </summary>
+    /// <param name="delta"></param>
     public void SetShieldPoints(float delta)
     {
         shieldPoints += delta;
     }
+
+    /// <summary>
+    /// Changes freezeTime left points
+    /// </summary>
+    /// <param name="delta"></param>
     public void SetFreezeTimePoints(float delta)
     {
         freezeTimePoints += delta;
     }
+
+    /// <summary>
+    /// Returns shield left points
+    /// </summary>
+    /// <returns></returns>
     public float GetShieldPoints()
     {
         return shieldPoints;
     }
+
+    /// <summary>
+    /// Returns freezeTime left points
+    /// </summary>
+    /// <returns></returns>
     public float GetFreezeTimePoints()
     {
         return freezeTimePoints;

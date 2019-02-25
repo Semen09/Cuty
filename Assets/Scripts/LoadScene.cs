@@ -2,18 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Loads given name scene
+/// </summary>
 public class LoadScene : MonoBehaviour {
     [SerializeField]
     string sceneToLoad;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
